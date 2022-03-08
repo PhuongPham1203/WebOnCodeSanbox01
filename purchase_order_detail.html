@@ -18,6 +18,10 @@
     ></script>
     <script src="js/knockout-3.5.1.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <!--Start Narbar-->
@@ -30,42 +34,367 @@
         </div>
       </nav>
     </div>
-    <!--End Narbar-->
     <br />
+    <!--End Narbar-->
 
     <div class="container text-center text-info">
       <h3><u>Purchase Order 955399</u></h3>
     </div>
 
     <!--Start Purchase Order detail-->
-    <div class="container">
+    <div class="container border">
+      <br />
       <div class="row">
         <div class="col-md-12 col-lg-6">
+          <!--Start container-->
           <div class="container">
             <div class="row">
-              <div class="col-2 "><p><b>Supplier</b></p></div>
+              <div class="col-4">
+                <p class="fs-6"><b>Supplier:</b></p>
+              </div>
               <div class="col-8">
-                
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Supplier"
-                    aria-label="Username"
-                    aria-describedby="basic-addon1"
-                  />
-                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  aria-label="Supplier"
+                  aria-describedby="inputGroup-sizing-sm"
+                  readonly
+                />
+                <br />
+              </div>
+
+              <div class="col-4">
+                <p class="fs-6"><b>Stock Site:</b></p>
+              </div>
+              <div class="col-8">
+                <input
+                  type="text"
+                  class="form-control"
+                  aria-label="Supplier"
+                  aria-describedby="inputGroup-sizing-sm"
+                  readonly
+                />
+                <br />
+              </div>
+
+              <div class="col-4">
+                <p class="fs-6"><b>Order Date:</b></p>
+              </div>
+              <div class="col-8">
+                <input
+                  type="text"
+                  class="form-control"
+                  aria-label="Supplier"
+                  aria-describedby="inputGroup-sizing-sm"
+                  readonly
+                />
+                <br />
+              </div>
+
+              <div class="col-4">
+                <p class="fs-6"><b>Note:</b></p>
+              </div>
+              <div class="col-8">
+                <textarea
+                  class="form-control"
+                  aria-label="With textarea"
+                ></textarea>
+                <br />
+              </div>
+            </div>
+          </div>
+          <!--End container-->
+        </div>
+        <div class="col-md-12 col-lg-6">
+          <!--Start container-->
+          <div class="container">
+            <div class="row">
+              <div class="col-4">
+                <p class="fs-6"><b>Supplier Name:</b></p>
+              </div>
+              <div class="col-8">
+                <input
+                  type="text"
+                  class="form-control"
+                  aria-label="Supplier"
+                  aria-describedby="inputGroup-sizing-sm"
+                  readonly
+                />
+                <br />
+              </div>
+
+              <div class="col-4">
+                <p class="fs-6"><b>Stock Name:</b></p>
+              </div>
+              <div class="col-8">
+                <input
+                  type="text"
+                  class="form-control"
+                  aria-label="Supplier"
+                  aria-describedby="inputGroup-sizing-sm"
+                />
+                <br />
+              </div>
+
+              <div class="col-4">
+                <p class="fs-6">
+                  <b>Address<span class="text-danger">*</span>:</b>
+                </p>
+              </div>
+              <div class="col-8">
+                <textarea
+                  class="form-control"
+                  aria-label="With textarea"
+                ></textarea>
+                <br />
+              </div>
+
+              <div class="col-4">
+                <p class="fs-6">
+                  <b>County<span class="text-danger">*</span>:</b>
+                </p>
+              </div>
+              <div class="col-8">
+                <input
+                  type="text"
+                  class="form-control"
+                  aria-label="Supplier"
+                  aria-describedby="inputGroup-sizing-sm"
+                />
+                <br />
+              </div>
+
+              <div class="col-4">
+                <p class="fs-6">
+                  <b>Post Code<span class="text-danger">*</span>:</b>
+                </p>
+              </div>
+              <div class="col-8">
+                <input
+                  type="text"
+                  class="form-control"
+                  aria-label="Supplier"
+                  aria-describedby="inputGroup-sizing-sm"
+                />
+                <br />
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-12 col-lg-6">
-          Column
-        </div>
       </div>
     </div>
+    <br />
+
     <!--End Purchase Order detail-->
 
     <!--Start Purchase Order Items-->
+    <div class="container table-responsive">
+      <!--Start Table-->
+      <table class="table table-bordered">
+        <!--Start Head-->
+        <thead class="table-info">
+          <tr>
+            <th>Part Number</th>
+            <th>Part Description</th>
+            <th>Manufacturer</th>
+            <th class="text-end">Qty Ordered</th>
+            <th class="text-end">Qty Delivered</th>
+            <th class="text-end">Back Order</th>
+            <th class="text-end">M2 Buy Price (£)</th>
+            <th>Memo</th>
+            <th class="text-end">Total Price (£)</th>
+            <th></th>
+          </tr>
+        </thead>
+        <!--End Head-->
+
+        <!--Start Body-->
+        <tbody>
+          <!--Item-->
+          <tr>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                value="0484C002AA"
+                aria-label="Supplier"
+                aria-describedby="inputGroup-sizing-sm"
+                readonly
+              />
+            </td>
+            <td>C-EXV 51 TONER Y</td>
+            <td>Canon</td>
+            <td>
+              <input
+                type="number"
+                class="form-control text-end"
+                value="1"
+                step="1"
+                aria-label="Supplier"
+                aria-describedby="inputGroup-sizing-sm"
+              />
+            </td>
+            <td class="text-end">0</td>
+            <td class="text-end">Y</td>
+            <td>
+              <input
+                type="number"
+                class="form-control text-end"
+                value="208.79"
+                aria-label="Supplier"
+                aria-describedby="inputGroup-sizing-sm"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                aria-label="Supplier"
+                aria-describedby="inputGroup-sizing-sm"
+              />
+            </td>
+            <td class="text-end">208.79</td>
+            <td>
+              <button type="button" class="btn btn-outline-danger btn-sm">
+                <i class="fa fa-times text-danger" aria-hidden="true"></i>
+              </button>
+            </td>
+          </tr>
+
+          <!--Item-->
+          <tr>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                value="0484C002AA"
+                aria-label="Supplier"
+                aria-describedby="inputGroup-sizing-sm"
+                readonly
+              />
+            </td>
+            <td>C-EXV 51 TONER Y</td>
+            <td>Canon</td>
+            <td>
+              <input
+                type="number"
+                class="form-control text-end"
+                value="1"
+                step="1"
+                aria-label="Supplier"
+                aria-describedby="inputGroup-sizing-sm"
+              />
+            </td>
+            <td class="text-end">0</td>
+            <td class="text-end">Y</td>
+            <td>
+              <input
+                type="number"
+                class="form-control text-end"
+                value="208.79"
+                aria-label="Supplier"
+                aria-describedby="inputGroup-sizing-sm"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                aria-label="Supplier"
+                aria-describedby="inputGroup-sizing-sm"
+              />
+            </td>
+            <td class="text-end">208.79</td>
+            <td>
+              <button type="button" class="btn btn-outline-danger btn-sm">
+                <i class="fa fa-times text-danger" aria-hidden="true"></i>
+              </button>
+            </td>
+          </tr>
+
+          <!--Item-->
+          <tr>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                value="0484C002AA"
+                aria-label="Supplier"
+                aria-describedby="inputGroup-sizing-sm"
+                readonly
+              />
+            </td>
+            <td>C-EXV 51 TONER Y</td>
+            <td>Canon</td>
+            <td>
+              <input
+                type="number"
+                class="form-control text-end"
+                value="1"
+                step="1"
+                aria-label="Supplier"
+                aria-describedby="inputGroup-sizing-sm"
+              />
+            </td>
+            <td class="text-end">0</td>
+            <td class="text-end">Y</td>
+            <td>
+              <input
+                type="number"
+                class="form-control text-end"
+                value="208.79"
+                aria-label="Supplier"
+                aria-describedby="inputGroup-sizing-sm"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                aria-label="Supplier"
+                aria-describedby="inputGroup-sizing-sm"
+              />
+            </td>
+            <td class="text-end">208.79</td>
+            <td>
+              <button type="button" class="btn btn-outline-danger btn-sm">
+                <i class="fa fa-times text-danger" aria-hidden="true"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+        <!--End Body-->
+      </table>
+      <!--End Table-->
+    </div>
     <!--End Purchase Order Items-->
+
+    <!--Start Price and Action-->
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-end">
+          <p>
+            <b>Purchase order price: (£) </b> 3,038.95 <br /><a href="#"
+              >Add Purchase order Line</a
+            >
+          </p>
+        </div>
+        <br />
+      </div>
+
+      <!--Start Button-->
+      <div class="row text-end">
+        <div class="col-9"></div>
+        <div class="col-2">
+          <button type="button" class="btn btn-light">Re-send email</button>
+        </div>
+        <div class="col-1">
+          <button type="button" class="btn btn-success">Save</button>
+        </div>
+      </div>
+      <!--End Button-->
+    </div>
+
+    <!--End Price and Action-->
   </body>
 </html>
