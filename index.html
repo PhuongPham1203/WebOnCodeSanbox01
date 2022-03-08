@@ -29,34 +29,50 @@
     ></script>
   </head>
   <body>
-    <h1>
-      This is a static template, there is no bundler or bundling involved!
-    </h1>
+    <div class="container">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="">Purchase order</a>
+          </div>
+        </div>
+      </nav>
+      <!--
+      <div class="row">
+        <div class="col-xs-1">Order No</div>
+        <div class="col-xs-1">Supplier</div>
+        <div class="col-xs-1">Stock Site</div>
+        <div class="col-xs-3">Stock Name</div>
+        <div class="col-xs-2">Ord Date</div>
+        <div class="col-xs-2">Last Update</div>
+        <div class="col-xs-2">Sent Email</div>
+      </div>
+      -->
+      <table class="table table-bordered text-center w-auto">
+        <thead>
+          <tr class="info">
+            <th>Order No</th>
+            <th>Supplier</th>
+            <th>Stock Site</th>
+            <th>Stock Name</th>
+            <th>Ord Date</th>
+            <th>Last Update</th>
+            <th>Sent Email</th>
+          </tr>
+        </thead>
 
-    <table class="table table-bordered text-center">
-      <tr class="info">
-        <th>
-          Order No
-        </th>
-        <th>
-          Supplier
-        </th>
-        <th>
-          Stock Site
-        </th>
-        <th>
-          Stock Name
-        </th>
-        <th>
-          Ord Date
-        </th>
-        <th>
-          Last Update
-        </th>
-        <th>
-          Sent Email
-        </th>
-      </tr>
-    </table>
+        <tbody>
+          <tr>
+            <th>955399</th>
+            <th>LW-MAN</th>
+            <th>Stock Site</th>
+            <th><p>M3 thagapol - Mokhesper</p></th>
+            <th>20/03/2019 00:00:00</th>
+            <th>20/03/2019 00:00:00</th>
+            <th><input type="checkbox" /></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </body>
 </html>
